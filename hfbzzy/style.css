@@ -44,7 +44,7 @@ header{
 .doc{
 	padding:10px;
 	float:left;
-	width:120px;
+	width:100px;
 }
 
 ul[class="fileli"] {
@@ -58,7 +58,7 @@ ul[class="fileli"] {
 }
 
 img[class="ico"]{
-	width:80px;
+	width:60px;
 	padding:10px;
 }
 
