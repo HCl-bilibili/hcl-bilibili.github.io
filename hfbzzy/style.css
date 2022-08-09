@@ -16,7 +16,7 @@ header{
 .list{
     border-style: dotted;
     border-width: 1px;
-    width: 100%;
+    width: 95%;
     padding: 10px;
     float: left;
 }
