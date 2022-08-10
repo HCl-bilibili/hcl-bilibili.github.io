@@ -10,7 +10,8 @@
     <style type="text/css">
         .year{
             font-size: large;
-            padding: 10px;
+            padding-left: 10px;
+			padding-right: 10px;
         }
         #page{
             width: 90%;
@@ -50,8 +51,8 @@
         </ul>
     </div>
 
-    <div>
-        <h3>科目筛选（重新选择科目后请再次单击入学年份。）</h3>
+    <div style="padding: 10px;">
+        <h3>科目筛选（重新选择科目后请再次单击入学年份）</h3>
         <input name="subject" value="" type="radio" id="all" checked>全部
         <input name="subject" value="Chinese" type="radio" id="yw">语文
         <input name="subject" value="math" type="radio" id="sx">数学
@@ -75,8 +76,8 @@
     <address style="font-style: normal;">
         <p>
             Copyright 2021-<span id="copyyear"></span> &copy; 
-            <a href="https://hcl-bilibili.github.io" target="_blank">hcl-bilibili.github.io</a> & 
-            <a href="https://hcl.rth.app" target="_blank">hcl.rth.app</a>
+            <a href="https://hcl-bilibili.github.io" target="_blank">hcl-bilibili.github.io</a>
+            （前hcl.rth.app已关闭）</a>
         </p>
         <script>
             document.getElementById("copyyear").innerText = String(d.getFullYear());
