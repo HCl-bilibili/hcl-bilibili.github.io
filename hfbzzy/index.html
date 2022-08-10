@@ -1,22 +1,88 @@
-<!--A New Website of HFBZZY Answers-->
-    <!--<div class="divcss1">
-		<h1>2020级<img src="hfbzzy/hfbzzy.png" width="200" alt="合肥八中作业" style="vertical-align:middle;">答案下载</h1>
-		<p>这是2020级使用的校本作业答案，2021级由于修订，不完全适用。
-			如果您有2021级作业答案希望分享，请联系<span class="qq">QQ2899628763</span>
-			或<span class="qq">QQ邮箱2899628763@qq.com</span>（住校生，仅周末在线）。</p>
-			<a href="2021zy.html" target="_blank">2021级</a>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>合肥八中作业答案下载</title>
+	<link rel="stylesheet" href="template">
 
-		<h4>温馨提示：</h4>使用新版Edge或Chrome浏览器，或者安装Adobe Acrobat插件，无需下载即可在线浏览。
+	<link rel="icon" type="image/x-ico" href="ico/logo.jpg">
+	<link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        .year{
+            font-size: large;
+            padding: 10px;
+        }
+        #page{
+            width: 90%;
+            height: 250px;
+        }
+    </style>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        var d = new Date();
+        var lastnum = d.getFullYear() - 1;
+        //document.getElementById("copyyear").innerText = String(d.getFullYear());
+        function choice(year){
+            var subject = $("input[name='subject']:checked").val() ;
+            link = year + "/index.html#" + subject;
+            document.getElementById(lastnum).setAttribute("style","");
+            document.getElementById(year).setAttribute("style","background-color: #233333;");
+            document.getElementById("page").setAttribute("src", link);
+            lastnum = year;
+        }
+    </script>
 
-		<h4>郑重声明：</h4>本答案合集仅供学习交流，切勿用于赢利目的，否则后果自负。本人、本网站不承担任何责任。
+</head>
 
-		<h4>有奖征集：</h4>特别征集2021级校本作业答案，接受Word、PDF和高清图片格式（须为完整的一本），
-		每本答案按页数可奖励<span class="qq">??元</span>。<br/>
-		注意：若投稿有重复，则优先考虑完整度，其次是清晰度（矢量图/矢量PDF＞Word＞位图/扫描件），最后，投稿时间早的优先。<br/>
-		受理时间：正常周末：周六下午14时至22时。请注明报酬支付方式，否则视为弃权。<br/>
-		线下交易：高三（13）班找主生物课代表（别找副的），或1号宿舍楼1615室2号床。<br/><br/>
+<body>
+    <header style="text-align: left;padding-left: 10px;">
+        <a href=".." target="_blank">返回主页</a>
+    </header>
 
-		<textarea class="qq">QQ2899628763</textarea>
-		<textarea class="qq">QQ邮箱2899628763@qq.com</textarea>
+    <h1>合肥八中作业答案下载</h1>
+    <div style="text-align: left;padding: 10px;">
+        <h3>温馨提示</h3>
+        <ul>
+            <li>使用新版Chrome、Edge或其他支持渲染PDF文件的浏览器，无需下载即可在线浏览。</li>
+            <li>本页面由GitHub托管，如遇加载缓慢，请下载
+                <a href="https://steampp.net/" target="_blank">Steam++</a> 开启GitHub加速。</li>
+            <li>投稿答案，必须通过邮箱2899628763@qq.com发送，只接受原版矢量PDF，不接受Word和扫描图片。价格￥0.1/页。</li>
+        </ul>
+    </div>
 
-		</div>-->
+    <div>
+        <h3>科目筛选</h3>
+        <input name="subject" value="" type="radio" id="all" checked>全部
+        <input name="subject" value="Chinese" type="radio" id="yw">语文
+        <input name="subject" value="math" type="radio" id="sx">数学
+        <input name="subject" value="English" type="radio" id="yy">英语
+        <input name="subject" value="physics" type="radio" id="wl">物理
+        <input name="subject" value="chemistry" type="radio" id="hx">化学
+        <input name="subject" value="biology" type="radio" id="sw">生物
+        <input name="subject" value="politics" type="radio" id="zz">思想政治
+        <input name="subject" value="history" type="radio" id="ls">历史
+        <input name="subject" value="geography" type="radio" id="dl">地理
+        <p>重新选择科目后请再次单击入学年份。</p>
+    </div>
+
+    <div>
+        <button class="year" id="2022" onclick="choice(2022)">2022级</button>
+        <button class="year" id="2021" onclick="choice(2021)">2021级</button>
+        <button class="year" id="2020" onclick="choice(2020)">2020级</button>
+    </div>
+
+    <iframe id="page"></iframe>
+    
+    <address style="font-style: normal;">
+        <p>
+            Copyright 2021-<span id="copyyear"></span> &copy; 
+            <a href="https://hcl-bilibili.github.io" target="_blank">hcl-bilibili.github.io</a> & 
+            <a href="https://hcl.rth.app" target="_blank">hcl.rth.app</a>
+        </p>
+        <script>
+            document.getElementById("copyyear").innerText = String(d.getFullYear());
+        </script>
+    </address>
+</body>
+
+</html>
