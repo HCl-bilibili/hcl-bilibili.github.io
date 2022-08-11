@@ -57,6 +57,7 @@ ul[class="fileli"] {
 img[class="ico"]{
 	width:60px;
 	padding:10px;
+	padding-bottom:0px;
 }
 
 a {
