@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-	<meta charset="utf-8">
-	<title>合肥八中作业答案下载</title>
-	<link rel="stylesheet" href="template">
+    <meta charset="utf-8">
+    <title>合肥八中作业答案下载</title>
+    <link rel="icon" type="image/x-ico" href="ico/logo.jpg">
+    <link rel="stylesheet" href="style.css">
 
-	<link rel="icon" type="image/x-ico" href="ico/logo.jpg">
-	<link rel="stylesheet" href="style.css">
     <style type="text/css">
         .year{
             font-size: large;
@@ -17,12 +16,26 @@
             width: 90%;
             height: 250px;
         }
+        #tips{
+            text-align: left;
+            padding: 10px;
+        }
+        header{
+            text-align: left;
+            padding-left: 10px;
+        }
+        #sheet{
+            padding: 10px;
+        }
+        address{
+            font-style: normal;
+        }
     </style>
+
     <script src="../jquery-3.6.0.js"></script>
-    <script>
+    <script language="javascript">
         var d = new Date();
         var lastnum = d.getFullYear() - 1;
-        //document.getElementById("copyyear").innerText = String(d.getFullYear());
         function choice(year){
             var subject = $("input[name='subject']:checked").val() ;
             link = year + "/index.html#" + subject;
@@ -32,16 +45,16 @@
             lastnum = year;
         }
     </script>
-
 </head>
 
 <body>
-    <header style="text-align: left;padding-left: 10px;">
-        <a href=".." target="_blank">返回主页</a>
+    <header>
+        <a href="https://hfbz.wiki/" target="_blank">返回wiki主页</a>
+        <a href=".." target="_blank">返回本站主页</a>
     </header>
 
     <h1>合肥八中作业答案下载</h1>
-    <div style="text-align: left;padding: 10px;">
+    <div id="tips">
         <h3>温馨提示</h3>
         <ul>
             <li>使用新版Chrome、Edge或其他支持渲染PDF文件的浏览器，无需下载即可在线浏览。</li>
@@ -51,7 +64,7 @@
         </ul>
     </div>
 
-    <div style="padding: 10px;">
+    <div id="sheet">
         <h3>科目筛选（重新选择科目后请再次单击入学年份）</h3>
         <input name="subject" value="" type="radio" id="all" checked>全部
         <input name="subject" value="Chinese" type="radio" id="yw">语文
@@ -73,17 +86,16 @@
 
     <iframe id="page"></iframe>
     
-    <address style="font-style: normal;">
+    <address>
         <p>
             Copyright 2021-<span id="copyyear"></span> &copy; 
             <a href="https://hcl-bilibili.github.io" target="_blank">hcl-bilibili.github.io</a>
-            （前hcl.rth.app已关闭）</a>
+            （前hcl.rth.app已关闭）
         </p>
-        <script>
+        <script language="javascript">
             document.getElementById("copyyear").innerText = String(d.getFullYear());
         </script>
-		<a href="https://github.com/HCl-bilibili/hcl-bilibili.github.io/tree/main"
-		target="_blank">本站GitHub公开仓库</a>
+		<a href="https://github.com/HCl-bilibili/hcl-bilibili.github.io/tree/main" target="_blank">本站GitHub公开仓库</a>
     </address>
 </body>
 
